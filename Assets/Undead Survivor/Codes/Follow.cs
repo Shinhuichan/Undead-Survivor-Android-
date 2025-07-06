@@ -13,6 +13,7 @@ public class Follow : MonoBehaviour
     
     void FixedUpdate()
     {
-        rect.position = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position);            
+        Vector3 pos = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position);
+        rect.position = new Vector3(pos.x, pos.y - 75, pos.z);            
     }
 }
