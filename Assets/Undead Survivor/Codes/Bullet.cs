@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour {
         this.per = per;
 
         if (per >= 0) {
-            rigid.velocity = dir * 15f;
+            rigid.linearVelocity = dir * 15f;
 
             //rigid.velocity = dir * 7.5f;
           
@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour {
 
         per--;
         if (per < 0) {
-            rigid.velocity = Vector2.zero;
+            rigid.linearVelocity = Vector2.zero;
             gameObject.SetActive(false);
         }
     }
